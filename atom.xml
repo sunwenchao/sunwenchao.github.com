@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Sun Mage]]></title>
+  <title><![CDATA[wow js]]></title>
   <link href="http://sunwenchao.github.com/atom.xml" rel="self"/>
   <link href="http://sunwenchao.github.com/"/>
-  <updated>2013-01-18T16:07:55+08:00</updated>
+  <updated>2013-01-19T23:15:52+08:00</updated>
   <id>http://sunwenchao.github.com/</id>
   <author>
     <name><![CDATA[Sun Wenchao]]></name>
@@ -14,26 +14,273 @@
 
   
   <entry>
-    <title type="html"><![CDATA[test categories]]></title>
-    <link href="http://sunwenchao.github.com/blog/2013/01/17/test-categories/"/>
-    <updated>2013-01-17T16:20:00+08:00</updated>
-    <id>http://sunwenchao.github.com/blog/2013/01/17/test-categories</id>
-    <content type="html"><![CDATA[<p>嗯，分类标签云也可以了，很好</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[test blog]]></title>
-    <link href="http://sunwenchao.github.com/blog/2013/01/17/test-blog/"/>
-    <updated>2013-01-17T01:02:00+08:00</updated>
-    <id>http://sunwenchao.github.com/blog/2013/01/17/test-blog</id>
-    <content type="html"><![CDATA[<p>我就是想测试下</p>
+    <title type="html"><![CDATA[用 Octopress 得先学 Markdown]]></title>
+    <link href="http://sunwenchao.github.com/blog/2013/01/19/xie-bo-ke-de-xian-xue-markdown/"/>
+    <updated>2013-01-19T00:23:00+08:00</updated>
+    <id>http://sunwenchao.github.com/blog/2013/01/19/xie-bo-ke-de-xian-xue-markdown</id>
+    <content type="html"><![CDATA[<h3>关于Markdown</h3>
 
-<h2>This is an H1</h2>
+<p>Markdown是一种to HTML的语言，就如同coffeescript to javascript、less to css一样。
+当然这种语言存在必然有其存在的意义，否然直接写html好了啦。
+Markdown官方解释是其用途是：<strong>用來作為一種網路內容的寫作用語言</strong>。
+写作更多的是处理文字的排版等，那么直接用HTML去写确实大材小用，Markdown便可用来方便编写以及提升源文件的可阅读性。</p>
 
-<h3>This is an H2</h3>
+<h3>语法:</h3>
 
-<h4>This is an H3</h4>
+<ul>
+<li><strong>HTML 语法</strong></li>
+</ul>
+
+
+<p>首先，Markdown是支持直接写HTML的，就如同在less文件中也可以直接写css。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;div style="width:200px;height:80px;background-color:green;">&lt;/div>
+</span><span class='line'>testbbb&>&lt; (看，`&lt;、>、&`等不需要转义使用了哦~)</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<div style="width:200px;height:80px;background-color:green;"></div>
+
+
+<p>testbbb&amp;>&lt; (看，<code>&lt;、&gt;、&amp;</code>等不需要转义使用了哦~)</p>
+
+<ul>
+<li><strong>段落和換行</strong></li>
+</ul>
+
+
+<p>Markdown中一个以上的空行会分隔出段落，下面fisrtP会在一个段落里，但是我们会发现中间有个空格。
+那是因为浏览器会把p标签内的文本换行转化为一个空格。</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>firstPfirstPfirstPfirstPfirstPfirstPfirstP
+</span><span class='line'>firstPfirstPfirstP
+</span><span class='line'>
+</span><span class='line'>secondPsecondPsecondP
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>firstPfirstPfirstPfirstPfirstPfirstPfirstP
+firstPfirstPfirstP</p>
+
+<p>secondPsecondPsecondP</p>
+
+<ul>
+<li><strong>标题</strong></li>
+</ul>
+
+
+<p>很容易理解，这里只列出最简单的一种写法。</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'># This is an H1
+</span><span class='line'>### This is an H3
+</span><span class='line'>###### This is an H6
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>This is an H1</h1>
+
+<h3>This is an H3</h3>
+
+<h6>This is an H6</h6>
+
+<ul>
+<li><strong>引言</strong></li>
+</ul>
+
+
+<p>就是像回复邮件中引用的那种情形。</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>&gt; This is the first level of quoting.
+</span><span class='line'>&gt; &gt; ######This is nested blockquote.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote><p>This is the first level of quoting.</p>
+
+<blockquote><h6>This is nested blockquote.</h6></blockquote></blockquote>
+
+<ul>
+<li><strong>列表</strong></li>
+</ul>
+
+
+<p>有序列表的数值改动是无用的，而且貌似只能从1开始。</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>1.  Bird
+</span><span class='line'>2.  McHale
+</span><span class='line'>3.  Parish
+</span><span class='line'>    *   Red
+</span><span class='line'>    *   Green
+</span><span class='line'>    *   Blue
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>1.  Bird
+2.  McHale
+3.  Parish
+    *   Red
+    *   Green
+    *   Blue
+</code></pre>
+
+<ul>
+<li><strong>代码块</strong></li>
+</ul>
+
+
+<p>4个空格或一个tab缩进即代表代码块，这里只是处理成了pre元素，octopress提供了更好的代码展示插件。</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>This is a normal paragraph:
+</span><span class='line'>
+</span><span class='line'>    This is a code block.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is a normal paragraph:</p>
+
+<pre><code>This is a code block.
+</code></pre>
+
+<ul>
+<li><strong>分割线</strong></li>
+</ul>
+
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>***
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<ul>
+<li><strong>链接</strong></li>
+</ul>
+
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>This is [an example](http://example.com/ &quot;Title&quot;) inline link.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is <a href="http://example.com/" title="Title">an example</a> inline link.</p>
+
+<ul>
+<li><strong>文字修饰</strong></li>
+</ul>
+
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>*single asterisks*
+</span><span class='line'>
+</span><span class='line'>**double asterisks**
+</span><span class='line'>
+</span><span class='line'>`printf()`
+</span><span class='line'>
+</span><span class='line'>A backtick-delimited string in a code span: `` `foo` ``
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>single asterisks</em></p>
+
+<p><strong>double asterisks</strong></p>
+
+<p><code>printf()</code></p>
+
+<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
+
+<ul>
+<li><strong>图片</strong></li>
+</ul>
+
+
+<p>octopress也提供了更好的图片插件。</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>![Alt text](/images/logo.png &quot;Optional title&quot;)
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="http://sunwenchao.github.com/images/logo.png" title="Optional title" alt="Alt text" /></p>
+
+<ul>
+<li><strong>转义字符</strong></li>
+</ul>
+
+
+<p>用反斜杠来转义。</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>\*literal asterisks\*
+</span><span class='line'>
+</span><span class='line'>\   反斜線
+</span><span class='line'>`   反引號
+</span><span class='line'>*   星號
+</span><span class='line'>_   底線
+</span><span class='line'>{}  大括號
+</span><span class='line'>[]  方括號
+</span><span class='line'>()  括號
+</span><span class='line'>#   井字號
+</span><span class='line'>+   加號
+</span><span class='line'>-   減號
+</span><span class='line'>.   英文句點
+</span><span class='line'>!   驚嘆號
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>*literal asterisks*</p>
+
+<hr />
+
+<br/>
+
+
+<br/>
+
+
+<p>上面是对markdown最常用，最简单的一些语法进行了介绍，后面还会介绍下octopress编写方面的一些插件。</p>
+
+<p>参考资料：<a href="http://markdown.tw/">http://markdown.tw/</a></p>
 ]]></content>
   </entry>
   
